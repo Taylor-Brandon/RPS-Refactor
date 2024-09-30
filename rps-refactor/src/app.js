@@ -4,7 +4,7 @@ import './styles/style.css'
 
 export default function App() {
     return(
-      <div className='body'>
+      <div className='body has-background-link-light'>
         <Game />
       </div>
     );
