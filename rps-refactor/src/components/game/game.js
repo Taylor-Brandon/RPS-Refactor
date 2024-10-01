@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Button from '../button/button';
 export default function Game() {
 
     const [wins, setWins] = useState(0);
@@ -36,19 +36,14 @@ export default function Game() {
             alert('You Lose!');
     }
     }
-
     return (
         <div className='card has-background-white-ter'>
                 <div className='card-content'>
                     <div className='content'>
                     <div className='card-header'>
-                            <h4 id='card-title' className=' card-header-title has-text-grey'>Rock, Paper, or Scissors?</h4>
+                    <h4 id='card-title' className=' card-header-title has-text-grey'>Rock, Paper, or Scissors?</h4>
                             </div>
-                        <div className='game'>
-            <button className="button is-medium is-link is-light mr-2" onClick={() => playGame('ROCK')}>Rock 🪨</button>
-            <button className="button is-medium is-link is-light mr-2" onClick={() => playGame('PAPER')}>Paper 📃</button>
-            <button className="button is-medium is-link is-light" onClick={() => playGame('SCISSORS')}>Scissors ✂️</button>
-            </div>
+            <Button playGame={playGame} />
             <div className='display'>
             <p className='has-text-grey'>Wins: {wins}</p>
             <p className='has-text-grey'>Ties: {ties}</p>
